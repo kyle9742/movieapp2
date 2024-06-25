@@ -5,6 +5,7 @@ import Fire from "./assets/fire.png";
 import Star from "./assets/glowing-star.png";
 import Party from "./assets/partying-face.png";
 import { Route, Routes } from 'react-router-dom';
+import SingleMovie from './components/MovieList/SingleMovie';
 
 export default function App() {
 	return (
@@ -21,6 +22,7 @@ export default function App() {
 					path='/upcoming'
 					element={<MovieList type='upcoming' title='예정작품' emoji={Party} />}
 				/>
+				<Route path='/movie/:movieId' element={<SingleMovie />} />
 			</Routes>
 		</div>
 	);

@@ -1,11 +1,12 @@
 /* eslint-disable react/prop-types */
 import './MovieCard.css';
 import Star from '../../assets/star.png';
+import { Link } from 'react-router-dom';
 
 export default function MovieCard({movie}) {
 	
 	return (
-		<a className='movie_card' href={`http://www.themoviedb.org/movie/${movie.id}?language=ko`} target='_blank'>
+		<Link to={`/movie/${movie.id}`} className='movie_card'>
 			<img
 				src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
 				alt='movie poster'
@@ -23,6 +24,6 @@ export default function MovieCard({movie}) {
 				</div>
 				<p className='movie_description'>{movie.overview.slice(0, 100) + '...'}</p>
 			</div>
-		</a>
+		</Link>
 	);
 }

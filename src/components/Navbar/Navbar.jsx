@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Fire from "../../assets/fire.png";
 import Star from "../../assets/glowing-star.png";
 import Party from "../../assets/partying-face.png";
@@ -8,7 +8,7 @@ import "./Navbar.css";
 export default function Navbar() {
   return (
     <nav className="navbar">
-      <h1>MovieApp</h1>
+      <Link to='/'><h1>MovieApp</h1></Link>
 
       <div className="navbar_links">
         <DarkMode />
